@@ -3,9 +3,13 @@ import Food from './Food';
 import PropTypes from 'prop-types';
 
 function FoodList(props){
+
+  const foodListStyle = {
+    fontFamily: "sans-serif",
+  };
+
   return (
-    <div>
-      <hr/>
+    <div style={foodListStyle}>
       {Object.keys(props.foodList).map(function(foodId) {
         var food = props.foodList[foodId];
         return <Food foodName={food.foodName}
