@@ -21,6 +21,7 @@
   "homepage": "https://github.com/epicodus-lessons/react-help-queue-example#readme",
   "dependencies": {
     "@material-ui/core": "^3.1.2",
+    "@material-ui/icons": "^3.0.1",
     "firebase": "^3.0.0",
     "moment": "^2.18.1",
     "prop-types": "^15.5.10",
