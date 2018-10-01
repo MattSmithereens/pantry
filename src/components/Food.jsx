@@ -17,7 +17,7 @@ function Food(props){
 
   const foodInformation =
     <div>
-      <h3>{props.servings} - {props.food}</h3>
+      <h3>{props.servings} - {props.foodName}</h3>
       <h4>{props.formattedWaitTime}</h4>
       <hr/>
     </div>;
@@ -37,7 +37,7 @@ function Food(props){
 }
 
 Food.propTypes = {
-  food: PropTypes.string.isRequired,
+  foodName: PropTypes.string.isRequired,
   servings: PropTypes.string.isRequired, //change to int
   notes: PropTypes.string,
   formattedWaitTime: PropTypes.string.isRequired,

@@ -8,8 +8,8 @@ function FoodList(props){
       <hr/>
       {Object.keys(props.foodList).map(function(foodId) {
         var food = props.foodList[foodId];
-        return <Food names={food.names}
-          location={food.location}
+        return <Food foodName={food.foodName}
+          servings={food.servings}
           issue={food.issue}
           formattedWaitTime={food.formattedWaitTime}
           currentRouterPath={props.currentRouterPath}

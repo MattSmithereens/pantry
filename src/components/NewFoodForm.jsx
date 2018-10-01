@@ -6,7 +6,7 @@ import constants from './../constants';
 const { c } = constants;
 
 function NewFoodForm(props){
-  let _food = null;
+  let _foodName = null;
   let _servings = null;
   let _notes = null;
 
@@ -16,14 +16,14 @@ function NewFoodForm(props){
     const action = {
       type: c.ADD_FOOD,
       id: v4(),
-      food: _food.value,
+      foodName: _foodName.value,
       servings: _servings.value,
       notes: _notes.value,
       timeOpen: new Moment(),
       formattedWaitTime: new Moment().fromNow(true)
     };
     dispatch(action);
-    _food.value = '';
+    _foodName.value = '';
     _servings.value = '';
     _notes.value = '';
   }
@@ -33,9 +33,9 @@ function NewFoodForm(props){
       <form onSubmit={handleNewFoodFormSubmission}>
         <input
           type='text'
-          id='food'
+          id='foodName'
           placeholder='Food Item'
-          ref={(input) => {_food = input;}}/><br />
+          ref={(input) => {_foodName = input;}}/><br />
         <input
           type='text'
           id='servings'

@@ -3,13 +3,13 @@ const { c } = constants;
 
 export default (state = {}, action) => {
   let newState;
-  const { food, servings, notes, timeOpen, id, formattedWaitTime } = action;
+  const { foodName, servings, notes, timeOpen, id, formattedWaitTime } = action;
 
   switch (action.type) {
     case c.ADD_FOOD:
       newState = Object.assign({}, state, {
         [id]: {
-          food: food,
+          foodName: foodName,
           servings: servings,
           notes: notes,
           timeOpen: timeOpen,
