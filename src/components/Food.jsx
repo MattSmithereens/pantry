@@ -6,6 +6,16 @@ const { c } = constants;
 
 function Food(props){
 
+  const divStyle = {
+    fontFamily: "sans-serif",
+    border: "1px solid grey",
+    width: "50%",
+    margin: "1.25%",
+    padding: "3px",
+    verticalAlign: "top",
+    overflow: "auto"
+  };
+
   function handleSavingSelectedFood(foodId){
     const { dispatch } = props;
     const action = {
@@ -16,10 +26,9 @@ function Food(props){
   }
 
   const foodInformation =
-    <div>
+    <div style={divStyle}>
       <h3>{props.servings} - {props.foodName}</h3>
       <h4>{props.formattedWaitTime}</h4>
-      <hr/>
     </div>;
   if (props.currentRouterPath === '/admin'){
     return (
