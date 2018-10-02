@@ -5,9 +5,9 @@ function FoodDetail(props){
   return (
     <div>
       <hr/>
-      <h1>{props.selectedFood.foodName} - {props.selectedFood.servings}</h1>
+      <h1>{props.selectedFood.foodName} servings of applies {props.selectedFood.servings}</h1>
       <p>Added {props.selectedFood.formattedWaitTime} ago, eat within {props.selectedFood.shelfLife} days</p>
-      <p><em>{props.selectedFood.notes}</em></p>
+      <p>{props.selectedFood.notes}</p>
       <hr/>
     </div>
   );

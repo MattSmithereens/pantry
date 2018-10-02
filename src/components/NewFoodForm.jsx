@@ -10,16 +10,19 @@ function NewFoodForm(props){
   let _servings = null;
   let _notes = null;
   let _shelfLife = null;
-  let formStyle = {
-    width: '50%',
+  const formStyle = {
+    width: '40%',
     display: 'inline-block',
-    margin: '1.5%',
-    padding: '3px',
+    padding: '1px',
     verticalAlign: 'top',
-    height: '20%',
-    backgroundColor: '#CCC',
     overflow: 'auto'
   };
+  const inputStyle = {
+    width: '100%',
+    padding: '12px 20px',
+    margin: '8px 0',
+    boxSizing: 'border-box'
+  }
 
   function handleNewFoodFormSubmission(event) {
     const { dispatch } = props;
@@ -45,21 +48,25 @@ function NewFoodForm(props){
     <div style={formStyle}>
       <form onSubmit={handleNewFoodFormSubmission}>
         <input
+          style={inputStyle}
           type='text'
           id='foodName'
-          placeholder='Food Item'
+          placeholder='Enter the Food'
           ref={(input) => {_foodName = input;}}/><br />
         <input
+          style={inputStyle}
           type='number'
           id='servings'
-          placeholder='1'
+          placeholder='Enter number of servings'
           ref={(input) => {_servings = input;}}/><br />
         <input
+          style={inputStyle}
           type='number'
           id='shelfLife'
-          placeholder='Shelf life in days'
+          placeholder='Enter shelf life in days'
           ref={(input) => {_shelfLife = input;}}/><br />
         <textarea
+          style={inputStyle}
           id='notes'
           placeholder='Notes'
           ref={(textarea) => {_notes = textarea;}}/><br />

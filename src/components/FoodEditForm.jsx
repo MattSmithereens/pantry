@@ -20,7 +20,7 @@ function NewFoodForm(props){
       foodName: _foodName.value,
       servings: parseInt(_servings.value),
       notes: _notes.value,
-      shelfLife: _shelfLife.value,
+      shelfLife: parseInt(_shelfLife.value),
       timeOpen: new Moment(),
       formattedWaitTime: new Moment().fromNow(true)
     };

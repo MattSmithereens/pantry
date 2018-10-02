@@ -9,11 +9,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import constants from './../constants';
 const { c } = constants;
-//import './../styles/styles.css';
-import rowStyle from '../constants/styles';
+import rowStyle from '../constants/RowStyle';
 
 class App extends React.Component {
-
+  
   componentDidMount() {
     this.waitTimeUpdateTimer = setInterval(() =>
       this.updateFoodElapsedWaitTime(),

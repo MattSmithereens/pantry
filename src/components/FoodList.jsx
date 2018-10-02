@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function FoodList(props){
 
   const foodListStyle = {
-    height: '100%',
+    width: '100%',
     fontFamily: 'sans-serif',
   };
 
