@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import FoodList from './FoodList';
-import NewFoodControl from './NewFoodControl';
+import NewFoodForm from './NewFoodForm';
 import Error404 from './Error404';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import Moment from 'moment';
@@ -44,7 +44,7 @@ class App extends React.Component {
         <Header/>
         <Switch>
           <Route exact path='/' render={()=><FoodList foodList={this.props.masterFoodList} />} />
-          <Route path='/newfood' render={()=><NewFoodControl />} />
+          <Route path='/newfood' render={()=><NewFoodForm />} />
           <Route path='/admin' render={(props)=><Admin currentRouterPath={props.location.pathname} />} />
           <Route component={Error404} />
         </Switch>
