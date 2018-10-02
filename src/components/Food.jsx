@@ -8,7 +8,7 @@ function Food(props){
 
   let divStyle = {
     border: '1px solid grey',
-    width: '25%',
+    width: '100%',
     display: 'inline-block',
     margin: '1.5%',
     padding: '3px',

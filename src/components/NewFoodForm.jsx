@@ -10,6 +10,16 @@ function NewFoodForm(props){
   let _servings = null;
   let _notes = null;
   let _shelfLife = null;
+  let formStyle = {
+    width: '50%',
+    display: 'inline-block',
+    margin: '1.5%',
+    padding: '3px',
+    verticalAlign: 'top',
+    height: '20%',
+    backgroundColor: '#CCC',
+    overflow: 'auto'
+  };
 
   function handleNewFoodFormSubmission(event) {
     const { dispatch } = props;
@@ -32,7 +42,7 @@ function NewFoodForm(props){
   }
 
   return (
-    <div>
+    <div style={formStyle}>
       <form onSubmit={handleNewFoodFormSubmission}>
         <input
           type='text'

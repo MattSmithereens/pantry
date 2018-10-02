@@ -1,11 +1,8 @@
-const divStyle = {
-  fontFamily: 'sans-serif',
-  border: '1px solid grey',
-  width: '50%',
-  margin: '1.25%',
-  padding: '10px',
-  verticalAlign: 'top',
-  overflow: 'auto'
+const rowStyle = {
+  fontFamily: "sans-serif",
+  display: "flex",
+  flexDirection: "row",
+  padding: "3px"
 };
 
-export default divStyle;
+export default rowStyle;
