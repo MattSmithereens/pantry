@@ -45,6 +45,9 @@ function NewFoodForm(props){
           id='notes'
           placeholder='Notes'
           ref={(textarea) => {_notes = textarea;}}/><br />
+        <input
+          type='checkbox'
+        /><br />
         <button type='submit'>Add</button>
       </form>
     </div>
