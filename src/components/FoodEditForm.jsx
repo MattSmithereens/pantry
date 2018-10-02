@@ -20,7 +20,7 @@ function NewFoodForm(props){
       foodName: _foodName.value,
       servings: parseInt(_servings.value),
       notes: _notes.value,
-      shelfLife: parseInt(_shelfLife.value),
+      shelfLife: _shelfLife.value,
       timeOpen: new Moment(),
       formattedWaitTime: new Moment().fromNow(true)
     };
@@ -44,11 +44,6 @@ function NewFoodForm(props){
           id='servings'
           placeholder='1'
           ref={(input) => {_servings = input;}}/><br />
-        <input
-          type='number'
-          id='shelfLife'
-          placeholder='Shelf life in days'
-          ref={(input) => {_shelfLife = input;}}/><br />
         <textarea
           id='notes'
           placeholder='Notes'

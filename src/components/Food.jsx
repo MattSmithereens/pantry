@@ -7,16 +7,13 @@ const { c } = constants;
 function Food(props){
 
   let divStyle = {
-    border: '3px solid grey',
+    border: '1px solid grey',
     width: '25%',
     display: 'inline-block',
     margin: '1.5%',
-    padding: '10px',
+    padding: '3px',
     verticalAlign: 'top',
-    height: '40%',
-    WebkitBoxShadow: '0px 0px 33px 1px rgba(0,0,0,0.74)',
-    MozBoxShadow: '0px 0px 33px 1px rgba(0,0,0,0.74)',
-    boxShadow: '0px 0px 33px 1px rgba(0,0,0,0.74)',
+    height: '20%',
     backgroundColor: '#CCC',
     overflow: 'auto'
 };
@@ -33,7 +30,9 @@ function Food(props){
   const foodInformation =
     <div style={divStyle}>
       <h3>{props.foodName}</h3>
-      <p>{props.servings} servings. Bought {props.formattedWaitTime} ago.</p>
+      <p>{props.servings} servings<br />
+      Bought {props.formattedWaitTime} ago.<br />
+      Eat within {props.shelfLife} day(s)</p>
     </div>;
   if (props.currentRouterPath === '/admin'){
     return (
@@ -54,6 +53,7 @@ Food.propTypes = {
   foodName: PropTypes.string.isRequired,
   servings: PropTypes.number.isRequired,
   notes: PropTypes.string,
+  shelfLife: PropTypes.number.isRequired,
   formattedWaitTime: PropTypes.string.isRequired,
   currentRouterPath: PropTypes.string,
   foodId: PropTypes.string.isRequired

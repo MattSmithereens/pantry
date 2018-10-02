@@ -15,7 +15,8 @@ function FoodList(props){
         var food = props.foodList[foodId];
         return <Food foodName={food.foodName}
           servings={food.servings}
-          issue={food.issue}
+          notes={food.notes}
+          shelfLife={food.shelfLife}
           formattedWaitTime={food.formattedWaitTime}
           currentRouterPath={props.currentRouterPath}
           key={foodId}

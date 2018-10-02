@@ -5,7 +5,15 @@ const { c } = constants;
 
 export default (state = {}, action) => {
   let newState;
-  const { foodName, servings, notes, timeOpen, id, formattedWaitTime } = action;
+  const {
+    foodName,
+    servings,
+    notes,
+    shelfLife,
+    timeOpen,
+    id,
+    formattedWaitTime
+  } = action;
 
   switch (action.type) {
     case c.ADD_FOOD:
@@ -14,6 +22,7 @@ export default (state = {}, action) => {
           foodName: foodName,
           servings: servings,
           notes: notes,
+          shelfLife: shelfLife,
           timeOpen: timeOpen,
           id: id,
           formattedWaitTime: formattedWaitTime
