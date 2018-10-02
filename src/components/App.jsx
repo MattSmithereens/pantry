@@ -42,6 +42,7 @@ class App extends React.Component {
     return (
       <div>
         <Header/>
+        <NewFoodForm />
         <Switch>
           <Route exact path='/' render={()=><FoodList foodList={this.props.masterFoodList} />} />
           <Route path='/newfood' render={()=><NewFoodForm />} />
