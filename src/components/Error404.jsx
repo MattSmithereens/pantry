@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 function Error404(props){
 
   const divStyle = {
-    fontFamily: "sans-serif",
-    border: "1px solid grey",
-    width: "50%",
-    margin: "1.25%",
-    padding: "10px",
-    verticalAlign: "top",
-    overflow: "auto"
+    fontFamily: 'sans-serif',
+    border: '1px solid grey',
+    width: '50%',
+    margin: '1.25%',
+    padding: '10px',
+    verticalAlign: 'top',
+    overflow: 'auto'
   };
 
   return (

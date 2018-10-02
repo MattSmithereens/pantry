@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 function Header(){
 
   const navStyle = {
-    fontFamily: "sans-serif",
-    padding: "10px",
-    verticalAlign: "top",
+    fontFamily: 'sans-serif',
+    padding: '10px',
+    verticalAlign: 'top',
     backgroundColor: '#999'
   };
 

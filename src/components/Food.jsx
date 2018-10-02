@@ -7,13 +7,13 @@ const { c } = constants;
 function Food(props){
 
   const divStyle = {
-    fontFamily: "sans-serif",
-    border: "1px solid grey",
-    width: "50%",
-    margin: "1.25%",
-    padding: "3px",
-    verticalAlign: "top",
-    overflow: "auto"
+    fontFamily: 'sans-serif',
+    border: '1px solid grey',
+    width: '50%',
+    margin: '1.25%',
+    padding: '3px',
+    verticalAlign: 'top',
+    overflow: 'auto'
   };
 
   function handleSavingSelectedFood(foodId){

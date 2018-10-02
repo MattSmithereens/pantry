@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function FoodList(props){
 
   const foodListStyle = {
-    fontFamily: "sans-serif",
+    fontFamily: 'sans-serif',
   };
 
   return (

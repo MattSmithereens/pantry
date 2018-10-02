@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 function Admin(props){
   const divStyle = {
-    fontFamily: "sans-serif",
+    fontFamily: 'sans-serif',
   };
 
   let optionalSelectedFoodContent = null;
