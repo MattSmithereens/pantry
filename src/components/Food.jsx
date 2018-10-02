@@ -6,15 +6,20 @@ const { c } = constants;
 
 function Food(props){
 
-  const divStyle = {
-    fontFamily: 'sans-serif',
-    border: '1px solid grey',
-    width: '50%',
-    margin: '1.25%',
-    padding: '3px',
+  let divStyle = {
+    border: '3px solid grey',
+    width: '25%',
+    display: 'inline-block',
+    margin: '1.5%',
+    padding: '10px',
     verticalAlign: 'top',
+    height: '40%',
+    WebkitBoxShadow: '0px 0px 33px 1px rgba(0,0,0,0.74)',
+    MozBoxShadow: '0px 0px 33px 1px rgba(0,0,0,0.74)',
+    boxShadow: '0px 0px 33px 1px rgba(0,0,0,0.74)',
+    backgroundColor: '#CCC',
     overflow: 'auto'
-  };
+};
 
   function handleSavingSelectedFood(foodId){
     const { dispatch } = props;
@@ -27,8 +32,8 @@ function Food(props){
 
   const foodInformation =
     <div style={divStyle}>
-      <h3>{props.servings} - {props.foodName}</h3>
-      <h4>{props.formattedWaitTime}</h4>
+      <h3>{props.foodName}</h3>
+      <p>{props.servings} servings. Bought {props.formattedWaitTime} ago.</p>
     </div>;
   if (props.currentRouterPath === '/admin'){
     return (
