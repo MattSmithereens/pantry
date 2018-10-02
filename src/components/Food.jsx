@@ -47,7 +47,7 @@ function Food(props){
 
 Food.propTypes = {
   foodName: PropTypes.string.isRequired,
-  servings: PropTypes.string.isRequired, //change to int
+  servings: PropTypes.number.isRequired, //change to int
   notes: PropTypes.string,
   formattedWaitTime: PropTypes.string.isRequired,
   currentRouterPath: PropTypes.string,

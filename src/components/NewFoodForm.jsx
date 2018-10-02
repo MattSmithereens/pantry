@@ -37,9 +37,9 @@ function NewFoodForm(props){
           placeholder='Food Item'
           ref={(input) => {_foodName = input;}}/><br />
         <input
-          type='text'
+          type='number'
           id='servings'
-          placeholder='Servings'
+          placeholder='1'
           ref={(input) => {_servings = input;}}/><br />
         <textarea
           id='notes'
