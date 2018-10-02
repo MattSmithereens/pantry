@@ -17,15 +17,9 @@ class NewFoodControl extends React.Component {
   }
 
   render(){
-    let currentlyVisibleContent = null;
-    if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <NewFoodForm />;
-    } else {
-      currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation}/>;
-    }
     return (
       <div>
-        {currentlyVisibleContent}
+        <NewFoodForm />
       </div>
     );
   }
