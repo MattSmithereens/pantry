@@ -5,12 +5,16 @@ import FoodDetail from './FoodDetail';
 import { connect } from 'react-redux';
 
 function Admin(props){
+  const divStyle = {
+    fontFamily: "sans-serif",
+  };
+
   let optionalSelectedFoodContent = null;
   if (props.selectedFood.length > 0){
     optionalSelectedFoodContent =  <FoodDetail selectedFood={props.foodList[props.selectedFood]}/>;
   }
   return (
-    <div>
+    <div style={divStyle}>
       <h2>Admin</h2>
       {optionalSelectedFoodContent}
       <FoodList
