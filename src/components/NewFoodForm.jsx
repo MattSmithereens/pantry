@@ -17,7 +17,7 @@ function NewFoodForm(props){
       type: c.ADD_FOOD,
       id: v4(),
       foodName: _foodName.value,
-      servings: _servings.value,
+      servings: parseInt(_servings.value),
       notes: _notes.value,
       timeOpen: new Moment(),
       formattedWaitTime: new Moment().fromNow(true)
