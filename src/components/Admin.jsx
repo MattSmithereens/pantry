@@ -15,7 +15,6 @@ function Admin(props){
   }
   return (
     <div style={divStyle}>
-      <h2>Admin</h2>
       {optionalSelectedFoodContent}
       <FoodList
         foodList={props.foodList}
