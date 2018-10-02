@@ -13,30 +13,30 @@ const { c } = constants;
 
 class App extends React.Component {
 
-  // componentDidMount() {
-  //   this.waitTimeUpdateTimer = setInterval(() =>
-  //     this.updateFoodElapsedWaitTime(),
-  //   60000
-  //   );
-  // }
-  //
-  // componentWillUnmount(){
-  //   clearInterval(this.waitTimeUpdateTimer);
-  // }
-  //
-  // updateFoodElapsedWaitTime() {
-  //   const { dispatch } = this.props;
-  //   Object.keys(this.props.masterFoodList).map(foodId => {
-  //     const food = this.props.masterFoodList[foodId];
-  //     const newFormattedWaitTime = food.timeOpen.fromNow(true);
-  //     const action = {
-  //       type: c.UPDATE_TIME,
-  //       id: foodId,
-  //       formattedWaitTime: newFormattedWaitTime
-  //     };
-  //     dispatch(action);
-  //   });
-  // }
+  componentDidMount() {
+    this.waitTimeUpdateTimer = setInterval(() =>
+      this.updateFoodElapsedWaitTime(),
+    60000
+    );
+  }
+  
+  componentWillUnmount(){
+    clearInterval(this.waitTimeUpdateTimer);
+  }
+  
+  updateFoodElapsedWaitTime() {
+    const { dispatch } = this.props;
+    Object.keys(this.props.masterFoodList).map(foodId => {
+      const food = this.props.masterFoodList[foodId];
+      const newFormattedWaitTime = food.timeOpen.fromNow(true);
+      const action = {
+        type: c.UPDATE_TIME,
+        id: foodId,
+        formattedWaitTime: newFormattedWaitTime
+      };
+      dispatch(action);
+    });
+  }
 
   render(){
     return (
