@@ -8,7 +8,7 @@ function Food(props){
 
   let divStyle = {
     border: '1px solid grey',
-    // width: '100%',
+    width: '100%',
     display: 'inline-block',
     margin: '1.5%',
     padding: '3px',
@@ -28,26 +28,26 @@ function Food(props){
   }
 
   const foodInformation =
-    <div style={divStyle}>
+    <div>
       <h3>{props.foodName}</h3>
       <p>{props.servings} servings<br />
       Bought {props.formattedWaitTime} ago.<br />
       Eat within {props.shelfLife} day(s)</p>
     </div>;
-  if (props.currentRouterPath === '/admin'){
+ // if (props.currentRouterPath === '/admin'){
     return (
-      <div onClick={() => {handleSavingSelectedFood(props.foodId);}}>
+      <div style={divStyle} onClick={() => {handleSavingSelectedFood(props.foodId);}}>
         {foodInformation}
       </div>
     );
-  } else {
-    return (
-      <div>
-        {foodInformation}
-      </div>
-    );
+  // } else {
+  //   return (
+  //     <div>
+  //       {foodInformation}
+  //     </div>
+  //   );
+  // }
   }
-}
 
 Food.propTypes = {
   foodName: PropTypes.string.isRequired,

@@ -45,9 +45,9 @@ class App extends React.Component {
         <div style={rowStyle}>
           <NewFoodForm />
           <Switch>
-            <Route exact path='/' render={()=><FoodList foodList={this.props.masterFoodList} />} />
+            <Route exact path='/old' render={()=><FoodList foodList={this.props.masterFoodList} />} />
             <Route path='/newfood' render={()=><NewFoodForm />} />
-            <Route path='/admin' render={(props)=><Admin currentRouterPath={props.location.pathname} />} />
+            <Route path='/' render={(props)=><Admin currentRouterPath={props.location.pathname} />} />
             <Route component={Error404} />
           </Switch>
         </div>

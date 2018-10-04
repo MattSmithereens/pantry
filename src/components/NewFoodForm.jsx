@@ -19,8 +19,8 @@ function NewFoodForm(props){
   };
   const inputStyle = {
     width: '100%',
-    padding: '12px 20px',
-    margin: '8px 0',
+    padding: '5px 12px',
+    margin: '4px 0',
     boxSizing: 'border-box'
   }
 
