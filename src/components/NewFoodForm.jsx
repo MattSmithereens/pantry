@@ -3,7 +3,7 @@ import Moment from 'moment';
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 import constants from './../constants';
-import button from '@material-ui/core/Button';
+
 
 
 const { c } = constants;
@@ -74,9 +74,6 @@ function NewFoodForm(props) {
           placeholder='Notes'
           ref={(textarea) => { _notes = textarea; }} /><br />
         <button type='submit'>Add</button>
-        <button variant="contained" color="primary">
-          Material Button
-        </button>
       </form>
     </div>
   );
