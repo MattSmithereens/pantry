@@ -4,15 +4,15 @@ import FoodList from './FoodList';
 import NewFoodForm from './NewFoodForm';
 import Error404 from './Error404';
 import { Switch, Route, withRouter } from 'react-router-dom';
-import Moment from 'moment';
 import Admin from './Admin';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import constants from './../constants';
 const { c } = constants;
+import rowStyle from '../constants/RowStyle';
 
 class App extends React.Component {
-
+  
   componentDidMount() {
     this.waitTimeUpdateTimer = setInterval(() =>
       this.updateFoodElapsedWaitTime(),
@@ -42,12 +42,15 @@ class App extends React.Component {
     return (
       <div>
         <Header/>
-        <Switch>
-          <Route exact path='/' render={()=><FoodList foodList={this.props.masterFoodList} />} />
-          <Route path='/newfood' render={()=><NewFoodForm />} />
-          <Route path='/admin' render={(props)=><Admin currentRouterPath={props.location.pathname} />} />
-          <Route component={Error404} />
-        </Switch>
+        <div style={rowStyle}>
+          <NewFoodForm />
+          <Switch>
+            <Route exact path='/old' render={()=><FoodList foodList={this.props.masterFoodList} />} />
+            <Route path='/newfood' render={()=><NewFoodForm />} />
+            <Route path='/' render={(props)=><Admin currentRouterPath={props.location.pathname} />} />
+            <Route component={Error404} />
+          </Switch>
+        </div>
       </div>
     );
   }
