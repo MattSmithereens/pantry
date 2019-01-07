@@ -3,9 +3,12 @@ import Moment from 'moment';
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 import constants from './../constants';
+
+
+
 const { c } = constants;
 
-function NewFoodForm(props){
+function NewFoodForm(props) {
   let _foodName = null;
   let _servings = null;
   let _notes = null;
@@ -22,7 +25,7 @@ function NewFoodForm(props){
     padding: '5px 12px',
     margin: '4px 0',
     boxSizing: 'border-box'
-  }
+  };
 
   function handleNewFoodFormSubmission(event) {
     const { dispatch } = props;
@@ -52,27 +55,24 @@ function NewFoodForm(props){
           type='text'
           id='foodName'
           placeholder='Enter the Food'
-          ref={(input) => {_foodName = input;}}/><br />
+          ref={(input) => { _foodName = input; }} /><br />
         <input
           style={inputStyle}
           type='number'
           id='servings'
           placeholder='Enter number of servings'
-          ref={(input) => {_servings = input;}}/><br />
+          ref={(input) => { _servings = input; }} /><br />
         <input
           style={inputStyle}
           type='number'
           id='shelfLife'
           placeholder='Enter shelf life in days'
-          ref={(input) => {_shelfLife = input;}}/><br />
+          ref={(input) => { _shelfLife = input; }} /><br />
         <textarea
           style={inputStyle}
           id='notes'
           placeholder='Notes'
-          ref={(textarea) => {_notes = textarea;}}/><br />
-        <input
-          type='checkbox'
-        /><br />
+          ref={(textarea) => { _notes = textarea; }} /><br />
         <button type='submit'>Add</button>
       </form>
     </div>

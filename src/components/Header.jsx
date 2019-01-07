@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
-function Header(){
+function Header() {
 
   const navStyle = {
     fontFamily: 'sans-serif',
@@ -20,4 +20,4 @@ function Header(){
 
 export default Header;
 
-{/* <Link to="/newfood">Enter New Food Item</Link> <Link to="/">Home</Link> | <Link to="/admin">Item Detail</Link>*/}
+{/* <Link to="/newfood">Enter New Food Item</Link> <Link to="/">Home</Link> | <Link to="/admin">Item Detail</Link>*/ }
